@@ -45,6 +45,23 @@ class MaxiInteger
      */
     private function realSum($a, $b)
     {
+        $len1 = strlen($a->getValue());
+        $len2 = strlen($b->getValue());
+        $revA = strrev($a->getValue());
+        $revB = strrev($b->getValue());
+        $lenMax = max($len1, $len2);
+        $res = "";
+        $overflow = 0;
+        for ($i = 0; $i < $lenMax; $i++) {
+            
+            $sum = (int)$revA[$i] + (int)$revB[$i] + $overflow;
+            $res .= strval($sum % 10);
+            $overflow = (int)($sum / 10);
+            
+        }
+        if ($overflow != 0)
+                $res.='1';
+        return new MaxiInteger(strrev($res));
         /** @TODO */
     }
 
