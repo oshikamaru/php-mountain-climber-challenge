@@ -20,8 +20,8 @@ class Palindrome
      */
     public function generatePalindrome()
     {
-        $rev = strrev($this->str);
-        return $this->str.$rev;
+        $rev = strrev(utf8_decode($this->str));
+        return ($this->str.utf8_encode($rev));
     }
 
 }
