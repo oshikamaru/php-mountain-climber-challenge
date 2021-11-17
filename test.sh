@@ -19,11 +19,11 @@
 #         SCORE=$((SCORE+10));
 # fi
 
-./phpunit LevelD;
-LEVELD=$?;
-if [ $LEVELD = 0 ]; then
-        SCORE=$((SCORE+30));
-fi
+# ./phpunit LevelD;
+# LEVELD=$?;
+# if [ $LEVELD = 0 ]; then
+#         SCORE=$((SCORE+30));
+# fi
 
 # ./phpunit LevelE;
 # LEVELE=$?;
@@ -43,11 +43,11 @@ fi
 #         SCORE=$((SCORE+80));
 # fi
 
-# ./phpunit LevelH;
-# LEVELH=$?;
-# if [ $LEVELH = 0 ]; then
-#         SCORE=$((SCORE+100));
-# fi
+./phpunit LevelH;
+LEVELH=$?;
+if [ $LEVELH = 0 ]; then
+        SCORE=$((SCORE+100));
+fi
 
 # ./phpunit LevelI;
 # LEVELI=$?;

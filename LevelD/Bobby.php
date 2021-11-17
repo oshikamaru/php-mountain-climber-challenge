@@ -70,7 +70,7 @@ class Bobby
         
         $sum = 0;
         for ($i = 0; $i < count($tune_wallet) ; $i++) { 
-            if ($tune_wallet[$i] < $price )
+            if ($tune_wallet[$i] < $price)
             {
                 if ($sum < $price)
                 {
@@ -84,7 +84,7 @@ class Bobby
             else {
                 unset($tune_wallet[$i]);
                 break;
-            } 
+            }
         }
         $this->restore_wallet($tune_wallet);
         // $this->orderWallet();
